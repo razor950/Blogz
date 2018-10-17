@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a id="blog-name" class="navbar-brand" href="/">
+                Blogz
+                </a>
+        <a class="navColors" href="/"> Home </a>
+        <a class="navColors" href="/blog"> All Post </a>
+        <a class="navColors" href="/newpost"> New Post </a>
+        <a class="navColors" href="/login"> Login </a>
+        <a class="navColors" href="/logout"> Logout </a>
+</nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
