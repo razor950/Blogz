@@ -114,8 +114,8 @@ def signup():
 
 @app.route('/blog', methods=['POST', 'GET'])
 def blog():
-    blog_id = int(request.args.get('id'))
-    user_id = int(request.args.get('userid'))
+    blog_id = request.args.get('id')
+    user_id = request.args.get('userid')
     posts = Blog.query.all()
 
     if blog_id:
