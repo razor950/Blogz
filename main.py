@@ -86,7 +86,7 @@ def signup():
         password = request.form['password']
         verifypass = request.form['verify']
 
-        user = User.query.filter_by(username=username).first()
+rrra        user = User.query.filter_by(username=username).first()
 
         if length(username) and no_space(username) and not user:
             username_error = ""
@@ -120,7 +120,7 @@ def blog():
 
     if blog_id:
         posts = Blog.query.filter_by(id=blog_id).first()
-        return render_template("post.html", title=posts.title, body=posts.body, user=posts.owner.username, user_id=posts.owner_id)
+        return render_template('entry.html', title=posts.title, body=posts.body, user=posts.owner.username, user_id=posts.owner_id)
     if user_id:
         post = Blog.query.filter_by(owner_id=user_id).all()
         return render_template('singleUser.html', post=post)
